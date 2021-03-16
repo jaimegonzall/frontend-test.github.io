@@ -1,0 +1,10 @@
+@use 'common';
+
+#title{
+    font-family: $font-title;
+    color: $second-color;
+}
+
+.hash{
+    @extend %hashed;
+}

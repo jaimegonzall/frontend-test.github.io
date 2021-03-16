@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&display=swap");
+@use 'main';
+@use 'desktop';
+@use 'mobile';
+/* variables */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Merriweather", serif;
+}
+/*# sourceMappingURL=style.css.map */

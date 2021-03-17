@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'main';
+@use 'slider';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&display=swap');
@@ -10,6 +11,8 @@ $font-title: 'Montserrat', sans-serif;
 $primary-color: #19bd9c;
 $second-color: #fff;
 $third-color: #205e5d;
+$fourth-color: #252839;
+
 
 
 body{
@@ -19,44 +22,38 @@ body{
 
 main{
     margin-top: 2%; /* eliminar y centrar el grid */
+    margin-bottom: 2%;
     display: grid;
     grid-template-columns: 1fr repeat(4, minmax(auto, 360px)) 1fr;
+    grid-template-rows: 80% 20%;
     justify-content: center;
     align-content: center;
-    /* place-content:	center center; */
-    
-    #logo{
-        grid-column: span 2;
-        background-image: url("../images/rock.jpg");
-        /* background-repeat: no-repeat; */
-        background-position: right top;
-        background-size: cover;
-        height: 90vh;
-    }
-
-    #eclipse-total{
-        grid-column: span 3;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(auto, 360px)) 1fr;
-        grid-template-rows: 73% auto;
-        background-image: url("../images/background.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center top;
-    }
-
 }
 
-#slogan{
-    background-color: #205e5d5e;
+#rocas{
+    background-image: url("../images/rocks.jpg");
+    background-size: cover;
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 80vh;
 }
 
-#vacio1{
-    /* background-color: rgba(65, 105, 225, 0.363); */
-}
-
-#rocket{
-    /* grid-column: span 2; */
+#eclipse{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    grid-column: span 3;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 360px));
+    grid-template-rows: 75% 25%;
+}
+
+
+#controles{
+    background-color: $fourth-color;
+    opacity: 0.7;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
 }

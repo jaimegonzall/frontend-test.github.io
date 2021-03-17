@@ -37,6 +37,34 @@ h1 {
   color: #fff;
 }
 
+#slider-box {
+  border: 1px solid red;
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr repeat(4, minmax(auto, 360px)) 1fr;
+}
+
+#logo {
+  background-color: rgba(255, 255, 255, 0.137);
+  grid-column: span 2;
+}
+
+#slogan {
+  background-color: #205e5d5e;
+  padding: 15px 10px;
+}
+
+#vacio1 {
+  background-color: rgba(65, 105, 225, 0.363);
+}
+
+#rocket {
+  /* grid-column: span 2; */
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
 body {
   background-color: #205e5d;
 }
@@ -44,43 +72,38 @@ body {
 main {
   margin-top: 2%;
   /* eliminar y centrar el grid */
+  margin-bottom: 2%;
   display: grid;
   grid-template-columns: 1fr repeat(4, minmax(auto, 360px)) 1fr;
+  grid-template-rows: 80% 20%;
   justify-content: center;
   align-content: center;
-  /* place-content:	center center; */
 }
-main #logo {
+
+#rocas {
+  background-image: url("../images/rocks.jpg");
+  background-size: cover;
   grid-column: span 2;
-  background-image: url("../images/rock.jpg");
-  /* background-repeat: no-repeat; */
-  background-position: right top;
-  background-size: cover;
-  height: 90vh;
+  grid-row: span 2;
+  height: 80vh;
 }
-main #eclipse-total {
-  grid-column: span 3;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(auto, 360px)) 1fr;
-  grid-template-rows: 73% auto;
+
+#eclipse {
   background-image: url("../images/background.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center top;
+  grid-column: span 3;
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 360px));
+  grid-template-rows: 80% 20%;
 }
 
-#slogan {
-  background-color: #205e5d5e;
-}
-
-#vacio1 {
-  /* background-color: rgba(65, 105, 225, 0.363); */
-}
-
-#rocket {
-  /* grid-column: span 2; */
-  background-repeat: no-repeat;
-  background-position: center top;
+#controles {
+  background-color: #252839;
+  opacity: 0.7;
+  grid-row: 2/3;
+  grid-column: 2/3;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+$font-stack: 'Merriweather', serif;
+$font-title: 'Montserrat', sans-serif;
+$primary-color: #19bd9c;
+$second-color: #fff;
+$third-color: #205e5d;
+
+
+
+
+    #slider-box{
+        border: 1px solid red;
+        position: absolute;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr repeat(4, minmax(auto, 360px)) 1fr;
+    }
+
+    #logo{
+        background-color: rgba(255, 255, 255, 0.137);
+        grid-column: span 2;
+        
+    }
+
+
+#slogan{
+    background-color: #205e5d5e;
+    padding: 15px 10px;
+}
+
+#vacio1{
+    background-color: rgba(65, 105, 225, 0.363);
+}
+
+#rocket{
+    /* grid-column: span 2; */
+    background-repeat: no-repeat;
+    background-position: center top;
+}

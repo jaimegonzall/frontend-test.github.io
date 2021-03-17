@@ -40,13 +40,14 @@ main{
 
 #eclipse{
     background-image: url("../images/background.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center top;
     grid-column: span 3;
     grid-row: span 2;
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 360px));
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 75% 25%;
 }
 
 

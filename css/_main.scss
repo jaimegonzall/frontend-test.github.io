@@ -18,13 +18,18 @@ $third-color: #205e5d;
 #title{
     font-family: $font-title;
     color: $second-color;
+    font-size: calc(1em + 3vw);
+    line-height: 0.85em;
+    width: 200%;
+}
+
+h2{
+    color: $second-color;
+    font-family: $font-stack;
+    font-size: 2em;
 }
 
 .hash{
     @extend %hashed;
-/*     color: yellow; */
-}
-
-h1{
-    color: $second-color;
+    font-size: 1.5em;
 }

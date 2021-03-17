@@ -1,7 +1,7 @@
 @use 'reset';
 @use 'main';
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&display=swap');
 
 
@@ -13,14 +13,14 @@ $third-color: #205e5d;
 
 
 body{
-    background-color: #205e5d;
+    background-color: $third-color;
 }
 
 
 main{
     margin-top: 2%; /* eliminar y centrar el grid */
     display: grid;
-    grid-template-columns: 1fr repeat(4, minmax(auto, 360px)) 1fr;
+    grid-template-columns: auto repeat(4, minmax(auto, 360px)) auto;
     justify-content: center;
     align-content: center;
     /* place-content:	center center; */
@@ -31,14 +31,22 @@ main{
         /* background-repeat: no-repeat; */
         background-position: right top;
         background-size: cover;
-        height: 90vh;
+        min-height: 810px;
+        img{
+            position: relative;
+            top: 15px;
+            left: 10vw;
+            width: calc(85px + 5vw);
+        }
     }
+
+
 
     #eclipse-total{
         grid-column: span 3;
         display: grid;
         grid-template-columns: repeat(3, minmax(auto, 360px)) 1fr;
-        grid-template-rows: 73% auto;
+        grid-template-rows: 74% auto;
         background-image: url("../images/background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -47,16 +55,45 @@ main{
 
 }
 
+#title{
+    position: relative;
+    top: 32%;
+    right: -76%;
+    display: inline-flex;
+}
+
 #slogan{
     background-color: #205e5d5e;
+    padding: 26px 16px;
+    hr{
+        border: 2px solid $primary-color;
+        margin: 11px 0 14px 0;
+        width: 38%;
+    }
 }
 
 #vacio1{
-    /* background-color: rgba(65, 105, 225, 0.363); */
+    color: red;
 }
 
 #rocket{
-    /* grid-column: span 2; */
+    grid-column: span 2;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url("../images/rocket.png");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
 }
+
+#controles{
+    background-color: #252839;
+    nav{
+        position: relative;
+        top: 100%;
+        background-color: #252839;
+        padding: 5px;
+    }
+}
+

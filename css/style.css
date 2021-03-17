@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  /* font-family: $font-stack; */
+}
+
+/* 
+
+para variables
+las variables que llame aquí, que no estén aquí: no funcionan
+pero los %aaaa{···} y @extend sí. Pero estos no deberían de llamar a variables.
+
+*/
+.hash {
+  color: #fff;
+  /* llamar a una variable externa no funciona */
+  text-transform: lowercase;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#title {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.hash {
+  /*     color: yellow; */
+}
+
+h1 {
+  color: #fff;
+}
+
+body {
+  background-color: #205e5d;
+}
+
+main {
+  margin-top: 2%;
+  /* eliminar y centrar el grid */
+  display: grid;
+  grid-template-columns: 1fr repeat(4, minmax(auto, 360px)) 1fr;
+  justify-content: center;
+  align-content: center;
+  /* place-content:	center center; */
+}
+main #logo {
+  grid-column: span 2;
+  background-image: url("../images/rock.jpg");
+  /* background-repeat: no-repeat; */
+  background-position: right top;
+  background-size: cover;
+  height: 90vh;
+}
+main #eclipse-total {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 360px)) 1fr;
+  grid-template-rows: 73% auto;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+#slogan {
+  background-color: #205e5d5e;
+}
+
+#vacio1 {
+  /* background-color: rgba(65, 105, 225, 0.363); */
+}
+
+#rocket {
+  /* grid-column: span 2; */
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+/*# sourceMappingURL=style.css.map */

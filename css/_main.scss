@@ -1,0 +1,30 @@
+@use 'common';
+
+$font-stack: 'Merriweather', serif;
+$font-title: 'Montserrat', sans-serif;
+$primary-color: #19bd9c;
+$second-color: #fff;
+$third-color: #205e5d;
+
+%hashed {
+    color: $second-color; /* llamar a una variable externa no funciona */
+    text-transform: lowercase;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+#title{
+    font-family: $font-title;
+    color: $second-color;
+}
+
+.hash{
+    @extend %hashed;
+/*     color: yellow; */
+}
+
+h1{
+    color: $second-color;
+}
